@@ -139,7 +139,21 @@ function navbar() {
                 
            </NavLink> */}
            <div>
-            <h2>{user?.displayName}</h2>
+            
+            {
+              !user?.displayName ?
+              <>
+              <h2>Avetor</h2>
+
+              </>
+              :
+              <>
+              <h2>{user?.displayName}</h2>
+
+              </>
+            }
+
+
            </div>
 
             <NavLink  className={"btn"}
@@ -152,7 +166,25 @@ function navbar() {
             <div className="avatar online">
                 <div className="w-20 rounded-full">
                      {/* <img src={user?.photoURL} /> */}
-                     <img src={user?.photoURL} />
+                     
+
+
+                     {
+              !user?.photoURL ?
+              <>
+              <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+
+              </>
+              :
+              <>
+              <img src={user?.photoURL} />
+
+              </>
+            }
+
+
+
+
                 </div>
               </div>
 
