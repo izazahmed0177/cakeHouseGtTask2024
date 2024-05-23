@@ -1,13 +1,97 @@
 // import React from 'react'
 // import Register from './Register';
 
+import { useNavigate } from "react-router-dom";
 import GoogleLogin from "../components/Auth/GoogleLogin";
+import { useAuthState, useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import auth from "../firebase/firebase.config";
+import { useEffect, useState } from "react";
 
 export default function Register() {
+
+  const navigate=useNavigate()
+  // const [user] = useAuthState(auth);
+  const userInfo = useAuthState(auth);
+
+  //===================
+
+  const [
+    createUserWithEmailAndPassword, user,
+    loading,
+    error,
+  
+  ] = useCreateUserWithEmailAndPassword(auth);
+
+  const [passMatch,setPassMatch]=useState(true);
+
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+
+    const form=e.target;
+    const email=form.email.value;
+    const password=form.password.value;
+    const confirmPassword=form.confirmPassword.value;
+
+    console.log(email,password,confirmPassword);
+
+    if (password !== confirmPassword) {
+        setPassMatch(false)
+    }
+
+    console.log(email,password,confirmPassword);
+
+if (password===confirmPassword) {
+  createUserWithEmailAndPassword(email,password)
+ 
+}
+
+
+  }
+
+  // ==create user====
+
+  // const [
+  //   createUserWithEmailAndPassword,
+  //   user,
+  //   loading,
+  //   error,
+  // ] = useCreateUserWithEmailAndPassword(auth);
+  
+
+
+
+  // ===============
+
+
+
+
+
+
+
+
+
+
+
+
+  useEffect(()=>{
+    if (userInfo[0]) {
+      navigate('/')
+    }
+
+    if (error) {
+      console.log(error?.message);
+    }
+
+  },[navigate,userInfo,error])
+
+
+console.log(user,loading);
+
   return (
     <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
     <h1 className="text-2xl font-bold text-center">Register</h1>
-    <form noValidate="" action="" className="space-y-6">
+    <form onSubmit={handleSubmit} noValidate="" action="" className="space-y-6">
 
       <div className="space-y-1 text-sm">
         <label htmlFor="email" className="block dark:text-gray-600">Email</label>
@@ -20,9 +104,20 @@ export default function Register() {
       </div>
 
       <div className="space-y-1 text-sm">
-        <label htmlFor="Confirmpassword" className="block dark:text-gray-600">Confirm Password</label>
-        <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+        <label htmlFor="confirmPassword" className="block dark:text-gray-600">Confirm Password</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
       </div>
+
+      {!passMatch && (
+
+<div className="my-2">
+    <p className="text-red-800">Password do not match</p>
+</div>
+)}
+
+{
+  error && <p className="text-red-800">{error?.message}</p>
+}
 
 
       <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Register</button>

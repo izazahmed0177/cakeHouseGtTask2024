@@ -139,7 +139,7 @@ function navbar() {
                 
            </NavLink> */}
            <div>
-            <h2>{user.displayName}</h2>
+            <h2>{user?.displayName}</h2>
            </div>
 
             <NavLink  className={"btn"}

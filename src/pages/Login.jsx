@@ -1,14 +1,55 @@
 // import React from 'react'
 
+import { useAuthState, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import GoogleLogin from "../components/Auth/GoogleLogin";
+import auth from "../firebase/firebase.config";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Login() {
+
+  // const [user, loading, error] = useAuthState(auth, options);
+
+  const navigate=useNavigate()
+  const userInfo = useAuthState(auth);
+
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
+
+
+  const handleSignIn=(e)=>{
+        e.preventDefault();
+    
+        const form=e.target;
+        const email=form.email.value;
+        const password=form.password.value;
+
+        signInWithEmailAndPassword(email,password)
+  }
+
+
+
+
+  useEffect(()=>{
+    if (userInfo[0]) {
+      navigate('/')
+    }
+
+  },[navigate,userInfo])
+
+
+  console.log(user,loading,error);
+
   return (
     <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
     <h1 className="text-2xl font-bold text-center">Login</h1>
 
 
-    <form noValidate="" action="" className="space-y-6">
+    <form onSubmit={handleSignIn} noValidate="" action="" className="space-y-6">
 
       <div className="space-y-1 text-sm">
         <label htmlFor="email" className="block dark:text-gray-600">Email</label>
@@ -18,9 +59,15 @@ export default function Login() {
       <div className="space-y-1 text-sm">
         <label htmlFor="password" className="block dark:text-gray-600">Password</label>
         <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+
+
         <div className="flex justify-end text-xs dark:text-gray-600">
           <a rel="noopener noreferrer" href="#">Forgot Password?</a>
         </div>
+
+        {
+  error && <p className="text-red-800">{error?.message}</p>
+}
 
       </div>
       <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Sign in</button>
