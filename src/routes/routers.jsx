@@ -9,6 +9,8 @@ import Products from "../pages/Products";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import DashbaordLayouts from "../layouts/DashbaordLayouts";
+import PrivateRouter from "./PrivateRouter";
 
 
 
@@ -59,6 +61,14 @@ const router=createBrowserRouter([
 
 
         ]
+      },
+      {
+        path:"/dashboard",
+        element:<PrivateRouter>
+            <DashbaordLayouts></DashbaordLayouts>
+        </PrivateRouter>,
+        errorElement:<ErrorPage></ErrorPage>,
+
       },
 ])
 
