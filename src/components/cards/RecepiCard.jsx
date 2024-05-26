@@ -41,7 +41,7 @@ export default function RecepiCard({ recipe }) {
 
 
 		</div>
-		<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">Read more</button>
+		<button  className=" btn flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-600 text-gray-50">Detale</button>
 	</div>
 </div>
   )

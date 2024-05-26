@@ -15,12 +15,18 @@
     "json-server": "^1.0.0-beta.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.6.6",
     "react": "^18.2.0",
     "react-confirm-alert": "^3.0.6",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
+    "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.23.1",
-    "sort-by": "^0.0.2"
+    "react-toastify": "^10.0.5",
+    "sort-by": "^0.0.2",
+    "sweetalert2": "^11.11.0",
+    "sweetalert2-react-content": "^5.0.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

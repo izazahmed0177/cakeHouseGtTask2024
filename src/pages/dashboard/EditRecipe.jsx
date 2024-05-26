@@ -2,6 +2,7 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
 
 export default function EditRecipe() {
@@ -50,7 +51,13 @@ export default function EditRecipe() {
         description,
       };
   
-      await axios.patch(`http://localhost:3000/recipes/${id}`, recipeData);
+   const editRecep=   await axios.patch(`http://localhost:3000/recipes/${id}`, recipeData);
+    //   toast.success('Successfully toasted!')
+    if (editRecep?.status === 200) {
+        console.log(editRecep);
+        alert("Add item")
+        toast.success('Successfully toasted!')
+      }
     };
 
 

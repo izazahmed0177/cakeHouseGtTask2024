@@ -2,6 +2,7 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 export default function AddRecipe() {
 
@@ -39,8 +40,14 @@ export default function AddRecipe() {
         image,
       };
   
-      await axios.post("http://localhost:3000/recipes", recipeData);
+    const postRecep=  await axios.post("http://localhost:3000/recipes", recipeData);
 
+      if (postRecep?.status === 200) {
+        alert("Add item")
+        toast.success('Successfully toasted!')
+      }
+
+    //   toast.success('Successfully toasted!')
       form.reset();
     };
 

@@ -2,22 +2,102 @@
 // import React from 'react'
 
 import axios from "axios";
+import toast from "react-hot-toast";
+// import { confirmAlert } from "react-confirm-alert";
 import { NavLink } from "react-router-dom";
+// import Swal from 'sweetalert2';
+
 
 export default function RecepiRow({recipe}) {
 
 
+
+    // const Swal = require('sweetalert2')
+
+    // Swal.fire({
+    //     title: "Are you sure?",
+    //     text: "You won't be able to revert this!",
+    //     icon: "warning",
+    //     showCancelButton: true,
+    //     confirmButtonColor: "#3085d6",
+    //     cancelButtonColor: "#d33",
+    //     confirmButtonText: "Yes, delete it!"
+    //   }).then((result) => {
+    //     if (result.isConfirmed) {
+    //       Swal.fire({
+    //         title: "Deleted!",
+    //         text: "Your file has been deleted.",
+    //         icon: "success"
+    //       });
+    //     }
+    //   });
+    
+
+
+
+
+
+
+
     const hendleDelete=async()=>{
-        // await fetch(`http://localhost:3000/shoes/${id}`,{
-        //     method:"DELETE"
-        // })
-        // .then((res)=>res.json())
-        // .then((data)=>console.log(data))
-        // onDelete(id)
+        //  confirmAlert({
+        //  confirm({
+        //     title: "Confirm to submit",
+        //     message: "Are you sure to do this.",
+        //     buttons: [
+        //       {
+        //         label: "Yes",
+        //         onClick: () => {
+        //           show()
+
+
+        //         }
+                
+        //       },
+        //       {
+        //         label: "No"
+        //         // onClick: () => alert("Click No")
+        //       }
+        //     ]
+        //   });
+
+        // if (confirm({
+        //     confirmation: 'Are you sure?'
+        //   })) {
+        //     console.log('yes');
+        //     show();
+           
+        //   } else {
+        //     // console.log('no');
+        //     alert("product not delete")
+        //   }
+
+
+
+
+
+        //   const show=async()=>{
+        //      const deletRecepi=await axios.delete(`http://localhost:3000/recipes/${recipe.id}`)
+
+        // if (deletRecepi?.status === 200) {
+        //     alert("Delete item")
+        //   }
+
+
+        //   }
+
+
+
+
+
+
+
+        //=====================
         const deletRecepi=await axios.delete(`http://localhost:3000/recipes/${recipe.id}`)
 
         if (deletRecepi?.status === 200) {
             alert("Delete item")
+            toast.success('Successfully toasted!')
           }
         
 
