@@ -35,8 +35,10 @@ export default function DashbaordLayouts() {
     <div className="grid grid-cols-12">
     
       <div className="col-span-2 bg-gray-300 min-h-screen p-12">
+      {/* <div className="col-span-2 bg-gray-300  min-h-screen p-12 sticky top-0 z-40  "> */}
         {/* <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content flex flex-col justify-between"> */}
-        <ul className="menu p-4 w-60 min-h-full bg-base-200 text-base-content flex flex-col justify-between">
+        {/* <ul className="menu p-4 w-60 min-h-full bg-base-200 text-base-content flex flex-col justify-between"> */}
+        <ul className="menu p-4 w-60 min-h-full  bg-base-200 text-base-content flex flex-col justify-between">
           <div>
             <li className="border border-blue-600 p-4 text w-full">
               {/* <Link to={""}>Dashboard</Link> */}
@@ -107,7 +109,8 @@ export default function DashbaordLayouts() {
       </div>
 
 
-      <div className="col-span-10 p-20">
+
+      <div className="col-span-10 p-20  ">
         <Outlet />
       </div>
 

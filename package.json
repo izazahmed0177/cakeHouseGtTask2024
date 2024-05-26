@@ -19,6 +19,8 @@
     "primereact": "^10.6.6",
     "react": "^18.2.0",
     "react-confirm-alert": "^3.0.6",
+    "react-confirm-dialog": "^1.0.5",
+    "react-dialog-confirm": "^1.0.3",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-hot-toast": "^2.4.1",

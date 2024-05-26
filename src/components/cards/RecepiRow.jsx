@@ -10,6 +10,7 @@ import { NavLink } from "react-router-dom";
 
 export default function RecepiRow({recipe}) {
 
+    // const confirm = useConfirm();
 
 
     // const Swal = require('sweetalert2')
@@ -97,7 +98,7 @@ export default function RecepiRow({recipe}) {
 
         if (deletRecepi?.status === 200) {
             alert("Delete item")
-            toast.success('Successfully toasted!')
+            toast.success('Successfully Delete!')
           }
         
 

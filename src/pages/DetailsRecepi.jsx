@@ -55,6 +55,7 @@ export default function DetailsRecepi() {
 			<div className="text-gray-800">
 				<p>{recipeDetails?.description}</p>
 			</div>
+          
 		</div>
 	</div>
 </div>

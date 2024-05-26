@@ -39,16 +39,19 @@ export default function AddRecipe() {
         description,
         image,
       };
+      console.log(recipeData);
   
-    const postRecep=  await axios.post("http://localhost:3000/recipes", recipeData);
+    const postRecep=await axios.post("http://localhost:3000/recipes", recipeData);
 
-      if (postRecep?.status === 200) {
+      if (postRecep?.status === 201) {
+        console.log(postRecep);
         alert("Add item")
-        toast.success('Successfully toasted!')
+        toast.success('Successfully toasted add 1111 !')
       }
-
-    //   toast.success('Successfully toasted!')
-      form.reset();
+      // console.log(postRecep);
+// 
+      // toast.success('Successfully toasted 3333!')
+    form.reset();
     };
 
 
@@ -83,7 +86,7 @@ export default function AddRecipe() {
             name="image"
             className="w-full py-3 px-5 border"
             placeholder="Enter Recipe Image Url"
-            required
+       
           />
         </div>
 

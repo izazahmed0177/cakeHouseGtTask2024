@@ -2,8 +2,11 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
+// import { confirmAlert } from "react-confirm-alert";
 import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
+
+// import ConfirmBox from "react-dialog-confirm";
 
 export default function EditRecipe() {
 
@@ -12,6 +15,29 @@ export default function EditRecipe() {
     const [recipeDetails, setRecipeDetails] = useState();
 
     const [categories, setCategories] = useState();
+    //==================
+    // const [isOpen, setIsOpen] = useState(false);
+
+    // const handleClose = () => {
+    //   setIsOpen(!isOpen);
+    // };
+  
+    // const handleConfirm = () => {
+    //   alert("yes button clicked");
+    //   setIsOpen(false);
+    // };
+    // const handleCancel = () => {
+    //   alert("no button clicked");
+    //   setIsOpen(false);
+    // };
+
+
+
+
+
+
+
+
 
     useEffect(() => {
       async function loadCategoreRecipe() {
@@ -33,6 +59,16 @@ export default function EditRecipe() {
   
       loadCategoreRecipe();
     }, [id]);
+
+
+
+    // function myFunction() {
+    //   if (confirm(text) == true) {
+    //     text = "You pressed OK!";
+    //   } else {
+    //     text = "You canceled!";
+    //   }
+    // }
   
     const handleEditRecipe = async (e) => {
       e.preventDefault();
@@ -50,6 +86,16 @@ export default function EditRecipe() {
         category,
         description,
       };
+
+
+    //   confirm({
+    //     title: 'Use location service?',
+    //     message: 'Help apps determine the location. This means sending anonymous location data, even when no apps are running.',
+    //     okText: 'Agree',
+    //     cancelText: 'Disagree'
+    // });
+
+
   
    const editRecep=   await axios.patch(`http://localhost:3000/recipes/${id}`, recipeData);
     //   toast.success('Successfully toasted!')
@@ -64,6 +110,7 @@ export default function EditRecipe() {
   return (
     <div className="w-full px-16">
     <h1 className="text-4xl mb-4 text-center">Edit Recipe</h1>
+    {/* <form onSubmit={handleEditRecipe} className="w-full"> */}
     <form onSubmit={handleEditRecipe} className="w-full">
       {/* <div className="mb-4">
         <label htmlFor="">Recipe ID </label>
@@ -124,6 +171,25 @@ export default function EditRecipe() {
         />
       </div>
     </form>
+    {/* <div> */}
+    {/* <button onClick={handleClose}>open confirm box</button>
+    <ConfirmBox // all props are required
+        label={{
+          text: "Are you sure you want to delete this element?",
+          confirm: "Yes",
+          cancel: "No"
+        }}
+        isOpen={isOpen} // to close or open dialog (true | false)
+        onClose={handleClose} // to close or open dialog
+        onConfirm={handleConfirm} // return yes : if button yes clicked
+        onCancel={handleCancel} // return no : button no clicked
+      />
+    </div> */}
+
+
+
+
+
   </div>
   )
 }

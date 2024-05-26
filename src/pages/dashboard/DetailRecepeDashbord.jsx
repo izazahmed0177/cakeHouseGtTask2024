@@ -55,6 +55,11 @@ export default function DetailRecepeDashbord() {
 			<div className="text-gray-800">
 				<p>{recipeDetails?.description}</p>
 			</div>
+            <div className="flex gap-4 ">
+            <button className="btn btn-outline btn-primary">Edit</button>
+            <button className="btn btn-outline btn-error">Delete</button>
+
+            </div>
 		</div>
 	</div>
 </div>

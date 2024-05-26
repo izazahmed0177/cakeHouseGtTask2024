@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
-import RecepiCard from "../../components/cards/RecepiCard";
+// import RecepiCard from "../../components/cards/RecepiCard";
 import RecepiCardDashbord from "../../components/cards/RecepiCardDashbord";
 
 export default function AllRecipeDashboard() {
