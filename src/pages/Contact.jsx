@@ -3,7 +3,7 @@
 export default function Contact() {
   return (
     <div>
-    <p>contact me</p>
+    <p className="text-5xl text-center text-blue-400 py-5">Contact Me</p>
       
     </div>
   )
