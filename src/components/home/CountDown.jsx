@@ -2,6 +2,9 @@
 
 export default function CountDown() {
   return (
+    <div className="flex items-center justify-center py-3 ">
+
+   
     <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
     <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
       <span className="countdown font-mono text-5xl">
@@ -27,6 +30,8 @@ export default function CountDown() {
       </span>
       sec
     </div>
+  </div>
+
   </div>
   )
 }
