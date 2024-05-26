@@ -14,3 +14,45 @@ react firebase hooks
 
 React Firebase Hooks - Auth
 -[react firebase hooks Authentication Hooks](https://github.com/csfrequency/react-firebase-hooks/tree/09bf06b28c82b4c3c1beabb1b32a8007232ed045/auth)
+
+
+JSON Server setup local server
+
+-[JSON Server](https://www.npmjs.com/package/json-server)
+
+npm install json-server
+
+Create a db.json or db.json5 file  in root
+
+{
+  "posts": [
+    { "id": "1", "title": "a title", "views": 100 },
+    { "id": "2", "title": "another title", "views": 200 }
+  ],
+  "comments": [
+    { "id": "1", "text": "a comment about post 1", "postId": "1" },
+    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
+
+
+Pass it to JSON Server CLI
+JSON Server  Open
+
+npx json-server db.json
+
+
+
+******
+react GET,POST,PUT,PATCH,DELET (CRUD opreation)
+
+-[Axios](https://axios-http.com/docs/intro)
+-[Axios GitHub](https://github.com/axios/axios)
+
+npm install axios
+
+
+
