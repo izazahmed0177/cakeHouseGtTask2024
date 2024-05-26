@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 // import React from 'react'
 
+import { NavLink } from "react-router-dom";
+
 export default function RecepiRow({recipe}) {
   return (
     <tr className="border-b border-opacity-20 dark:border-gray-300 dark:bg-gray-50">
@@ -25,7 +27,7 @@ export default function RecepiRow({recipe}) {
     <td className="p-3 text-right">
 
     <div className="flex gap-2">
-    <button className="btn btn-sx btn-neutral">Edit</button>
+    <NavLink to={`/dashboard/edit-recipe/${recipe?.id}` } className="btn btn-sx btn-neutral">Edit</NavLink>
             <button className="btn btn-sx btn-error">Delete</button>
 
     </div>

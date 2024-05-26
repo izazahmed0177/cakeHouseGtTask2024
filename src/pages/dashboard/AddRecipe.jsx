@@ -40,13 +40,15 @@ export default function AddRecipe() {
       };
   
       await axios.post("http://localhost:3000/recipes", recipeData);
+
+      form.reset();
     };
 
 
 
   return (
     <div className="w-full px-16">
-      <h1 className="text-4xl mb-4">Add Recipe</h1>
+      <h1 className="text-4xl mb-4 text-center">Add Recipe</h1>
       <form onSubmit={handleCreateRecipe} className="w-full">
         <div className="mb-4">
           <label htmlFor="">Recipe ID </label>
@@ -70,8 +72,8 @@ export default function AddRecipe() {
         <div className="mb-4">
           <label htmlFor=""> Image URL </label>
           <input
-            type="number"
-            name="price"
+            type="text"
+            name="image"
             className="w-full py-3 px-5 border"
             placeholder="Enter Recipe Image Url"
             required
