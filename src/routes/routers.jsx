@@ -11,6 +11,10 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import DashbaordLayouts from "../layouts/DashbaordLayouts";
 import PrivateRouter from "./PrivateRouter";
+import DashboardHome from "../pages/dashboard/DashboardHome";
+import ManageAllRecipe from "../pages/dashboard/ManageAllRecipe";
+import AddRecipe from "../pages/dashboard/AddRecipe";
+import EditRecipe from "../pages/dashboard/EditRecipe";
 
 
 
@@ -64,10 +68,28 @@ const router=createBrowserRouter([
       },
       {
         path:"/dashboard",
-        element:<PrivateRouter>
+        element:(<PrivateRouter>
             <DashbaordLayouts></DashbaordLayouts>
-        </PrivateRouter>,
+        </PrivateRouter>),
         errorElement:<ErrorPage></ErrorPage>,
+        children: [
+            {
+              index: true,
+              element: <DashboardHome />,
+            },
+            {
+              path: "manage-recipes",
+              element: <ManageAllRecipe />,
+            },
+            {
+              path: "add-recipe",
+              element: <AddRecipe />,
+            },
+            {
+              path: "edit-recipe/:id",
+              element: <EditRecipe />,
+            },
+        ],
 
       },
 ])
