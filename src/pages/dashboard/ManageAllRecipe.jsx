@@ -16,7 +16,12 @@ export default function ManageAllRecipe() {
           }
         }
         allRecipes();
-      }, []);
+
+      }, [recipes]);
+
+
+
+
 
 // console.log(recipes);
 
