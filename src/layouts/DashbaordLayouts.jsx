@@ -27,76 +27,10 @@ export default function DashbaordLayouts() {
     }
   };
 
-  // const handaleLogout=async()=>{
-
-  // const success = await signOut();
-  // if (success) {
-  //   alert('You are sign out');
-  // }
-
-  // let text;
-  // if (confirm("Press a button!") == true) {
-  //  await signOut();
-  //  alert('You are not sign out');
-  // } else {
-  //   alert('You are not sign out');
-  // }
-
-  // // text=await signOut();
-
-  //   }
-
-  // const handaleLogout=async()=> {
-  //   confirmAlert({
-  //     title: 'Confirm to submit',
-  //     message: 'Are you sure to do this.',
-  //     buttons: [
-  //       {
-  //         label: 'Yes',
-  //         onClick: await() => {
-  //           signOut();
-  //         }
-  //       },
-  //       {
-  //         label: 'No',
-  //         onClick: () => alert('Click No')
-  //       }
-  //     ]
-  //   });
-  // };
+  
 
   return (
-    //     <div className="drawer">
-    //   <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-    //   <div className="drawer-content">
-    //     {/* Page content here */}
-    //     <Outlet></Outlet>
-    //     <label htmlFor="my-drawer" className="btn btn-primary drawer-button">Open drawer</label>
-    //   </div>
-
-    //   <div className="drawer-side">
-    //     {/* <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label> */}
-    //     <label htmlFor="my-drawer" aria-label=" sidebar" className="drawer-overlay"></label>
-    //     <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content flex flex-col justify-between">
-    //       {/* Sidebar content here */}
-
-    //       <div>
-    //             <li>
-    //               <NavLink to={"/dashboard/manage-recipes"}>Mangae All Recipes</NavLink>
-    //             </li>
-    //             <li>
-    //               <NavLink to={"/dashboard/add-recipe"}>Add Recipe</NavLink>
-    //             </li>
-    //           </div>
-
-    //      <div className="flex gap-4">
-    //         <NavLink to={"/"} className="btn btn-outline btn-primary">Home</NavLink>
-    //         <button onClick={handaleLogout} className="btn btn-outline btn-error">Log Out</button>
-    //      </div>
-
-    //     </ul>
-    //   </div>
-    // </div>
+  
 
     <div className="grid grid-cols-12">
     
@@ -130,7 +64,7 @@ export default function DashbaordLayouts() {
                     viewTransitionName: isTransitioning ? "slide" : "",
                   };
                 }}
-                to={"dashboard/all-products"}
+                to={"/dashboard/allrecipedashbord"}
                 className="bg-blue-600"
               >
                 All Recipe

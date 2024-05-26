@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 // import React from 'react'
 
+import { NavLink } from "react-router-dom";
+
 // eslint-disable-next-line react/prop-types
 export default function RecepiCard({ recipe }) {
   return (
@@ -41,7 +43,7 @@ export default function RecepiCard({ recipe }) {
 
 
 		</div>
-		<button  className=" btn flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-600 text-gray-50">Detale</button>
+		<NavLink to={`/details/${recipe.id}`}  className=" btn flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-600 text-gray-50">Details</NavLink>
 	</div>
 </div>
   )

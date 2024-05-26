@@ -51,7 +51,7 @@ function navbar() {
               <li>
                 <NavLink
                 to={"/products"}
-                >Products</NavLink>
+                >Our Recipe</NavLink>
               </li>
               <li>
                 <NavLink
@@ -88,7 +88,7 @@ function navbar() {
               <li>
                 <NavLink
                 to={"/products"}
-                >Products</NavLink>
+                >Our Recipe</NavLink>
               </li>
               <li>
                 <NavLink

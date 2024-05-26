@@ -15,6 +15,9 @@ import DashboardHome from "../pages/dashboard/DashboardHome";
 import ManageAllRecipe from "../pages/dashboard/ManageAllRecipe";
 import AddRecipe from "../pages/dashboard/AddRecipe";
 import EditRecipe from "../pages/dashboard/EditRecipe";
+import DetailsRecepi from "../pages/DetailsRecepi";
+import AllRecipeDashboard from "../pages/dashboard/AllRecipeDashboard";
+import DetailRecepeDashbord from "../pages/dashboard/DetailRecepeDashbord";
 
 
 
@@ -59,6 +62,10 @@ const router=createBrowserRouter([
                 path:"register",
                 element:<Register></Register>
             },
+            {
+                path:"details/:id",
+                element:<DetailsRecepi></DetailsRecepi>
+            },
 
 
 
@@ -88,6 +95,14 @@ const router=createBrowserRouter([
             {
               path: "edit-recipe/:id",
               element: <EditRecipe />,
+            },
+            {
+              path: "allrecipedashbord",
+              element: <AllRecipeDashboard />,
+            },
+            {
+              path: "allrecipedashbord/detailsrecipedashbord/:id",
+              element: <DetailRecepeDashbord />,
             },
         ],
 
