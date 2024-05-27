@@ -101,8 +101,10 @@ export default function EditRecipe() {
     //   toast.success('Successfully toasted!')
     if (editRecep?.status === 200) {
         console.log(editRecep);
-        alert("Add item")
-        toast.success('Successfully toasted!')
+        alert("Are you Edit this item")
+        toast.success('Successfully Edit Recipe Item')
+      }else{
+        toast.error("Something wrong")
       }
     };
 

@@ -45,12 +45,13 @@ export default function AddRecipe() {
 
       if (postRecep?.status === 201) {
         console.log(postRecep);
-        alert("Add item")
-        toast.success('Successfully toasted add 1111 !')
+        alert("Are you Add this item")
+        toast.success('Successfully Add Recipe Item')
+      }else{
+        toast.error("Something wrong")
       }
-      // console.log(postRecep);
-// 
-      // toast.success('Successfully toasted 3333!')
+      
+      
     form.reset();
     };
 

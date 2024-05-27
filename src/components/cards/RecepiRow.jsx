@@ -97,8 +97,10 @@ export default function RecepiRow({recipe}) {
         const deletRecepi=await axios.delete(`http://localhost:3000/recipes/${recipe.id}`)
 
         if (deletRecepi?.status === 200) {
-            alert("Delete item")
-            toast.success('Successfully Delete!')
+            alert("Are you Delete this item")
+        toast.success('Successfully Delete Recipe Item')
+          }else{
+            toast.error("Something wrong")
           }
         
 
