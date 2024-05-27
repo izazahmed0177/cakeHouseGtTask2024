@@ -32,9 +32,9 @@ export default function DashbaordLayouts() {
   return (
   
 
-    <div className="grid grid-cols-12">
+    <div className="grid grid-cols-12    ">
     
-      <div className="col-span-2 bg-gray-300 min-h-screen p-12">
+      <div className="md:col-span-2 col-span-4 bg-gray-300 min-h-screen p-12">
       {/* <div className="col-span-2 bg-gray-300  min-h-screen p-12 sticky top-0 z-40  "> */}
         {/* <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content flex flex-col justify-between"> */}
         {/* <ul className="menu p-4 w-60 min-h-full bg-base-200 text-base-content flex flex-col justify-between"> */}
@@ -110,7 +110,7 @@ export default function DashbaordLayouts() {
 
 
 
-      <div className="col-span-10 p-20  ">
+      <div className="md:col-span-10 col-span-8 p-20  md:content-center content-end md:items-center items-end  ">
         <Outlet />
       </div>
 

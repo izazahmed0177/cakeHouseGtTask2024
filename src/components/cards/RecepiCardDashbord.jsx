@@ -45,7 +45,7 @@ export default function RecepiCardDashbord({ recipe }) {
           </div>
         </div>
 
-        <div className="flex flex-col items-end justify-end ">
+        <div className="flex flex-col items-end justify-end shadow-2xl ">
         <NavLink
           to={`detailsrecipedashbord/${recipe.id}`}
           className=" btn flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-600 text-gray-50"

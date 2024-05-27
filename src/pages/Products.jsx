@@ -23,7 +23,7 @@ export default function Products() {
   return (
     <div className="mx-16">
     <h1 className="text-4xl my-20 text-center">Our Newest Recipes </h1>
-    <div className="grid grid-cols-4 gap-6">
+    <div className="grid md:grid-cols-4 grid-cols-1 gap-6">
       {recipes
         ?.map((recipe) => (
           <RecepiCard key={recipe?.id} recipe={recipe} />
