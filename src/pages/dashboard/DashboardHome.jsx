@@ -3,7 +3,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import CategoryCard from "../../components/cards/CategoryCard";
-import RecepiCardDashbord from "../../components/cards/RecepiCardDashbord";
+// import RecepiCardDashbord from "../../components/cards/RecepiCardDashbord";
+import RecepiCardDashbordHome from "../../components/cards/RecepiCardDashbordHome";
 
 export default function DashboardHome() {
   const [recipes,setRecipes]=useState()
@@ -57,7 +58,7 @@ getRecipesCategories();
       {recipes ?.reverse()
             ?.slice(0, 6)
             ?.map((recipe) => (
-          <RecepiCardDashbord key={recipe?.id} recipe={recipe} />
+          <RecepiCardDashbordHome key={recipe?.id} recipe={recipe} />
         ))}
 
      

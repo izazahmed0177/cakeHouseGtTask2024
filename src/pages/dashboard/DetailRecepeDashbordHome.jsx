@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
 
-export default function DetailRecepeDashbord() {
+export default function DetailRecepeDashbordHome() {
     const { id } = useParams();
     const [recipeDetails, setRecipeDetails] = useState();
     const navigate = useNavigate();
     const location = useLocation();
 
-    const from = location?.state?.from?.pathname || "/dashboard/allrecipedashbord";
+    const from = location?.state?.from?.pathname || "/dashboard";
 
 
 
@@ -48,15 +48,6 @@ export default function DetailRecepeDashbord() {
       
 
   }
-
-
-
-
-
-
-
-
-    console.log(recipeDetails);
   return (
     <div className="p-5 mx-auto sm:p-10 md:p-16 bg-gray-100 text-gray-800">
 	<div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">

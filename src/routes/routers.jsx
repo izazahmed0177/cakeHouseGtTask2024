@@ -18,6 +18,7 @@ import EditRecipe from "../pages/dashboard/EditRecipe";
 import DetailsRecepi from "../pages/DetailsRecepi";
 import AllRecipeDashboard from "../pages/dashboard/AllRecipeDashboard";
 import DetailRecepeDashbord from "../pages/dashboard/DetailRecepeDashbord";
+import DetailRecepeDashbordHome from "../pages/dashboard/DetailRecepeDashbordHome";
 
 
 
@@ -104,6 +105,11 @@ const router=createBrowserRouter([
               path: "allrecipedashbord/detailsrecipedashbord/:id",
               // path: "/detailsrecipedashbord/:id",
               element: <DetailRecepeDashbord />,
+            },
+            {
+              path: "detailsrecipedashbord/:id",
+              // path: "/detailsrecipedashbord/:id",
+              element: <DetailRecepeDashbordHome />,
             },
         ],
 

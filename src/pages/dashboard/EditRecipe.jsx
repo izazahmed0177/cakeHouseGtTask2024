@@ -4,7 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 // import { confirmAlert } from "react-confirm-alert";
 import toast from "react-hot-toast";
-import { useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 // import ConfirmBox from "react-dialog-confirm";
 
@@ -15,6 +15,14 @@ export default function EditRecipe() {
     const [recipeDetails, setRecipeDetails] = useState();
 
     const [categories, setCategories] = useState();
+
+
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location?.state?.from?.pathname || "/dashboard/manage-recipes";
+    // const from = location?.state?.from?.pathname ;
     //==================
     // const [isOpen, setIsOpen] = useState(false);
 
@@ -103,6 +111,7 @@ export default function EditRecipe() {
         console.log(editRecep);
         alert("Are you Edit this item")
         toast.success('Successfully Edit Recipe Item')
+        navigate(from);
       }else{
         toast.error("Something wrong")
       }
