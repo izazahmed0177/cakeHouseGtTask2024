@@ -43,18 +43,18 @@ export default function AddRecipe() {
       // console.log(recipeData);
 
       Swal.fire({
-        title: "Do you want to save the changes?",
+        title: "Do you want to save the Recipe?",
         showDenyButton: true,
         showCancelButton: true,
-        confirmButtonText: "Save",
-        denyButtonText: `Don't save`
+        confirmButtonText: "Save Recipe",
+        denyButtonText: `Don't save Recipe`
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
           recepiAdd();
-          Swal.fire("Saved!", "", "success");
+          Swal.fire("Saved Recipe!", "", "success");
         } else if (result.isDenied) {
-          Swal.fire("Changes are not saved", "", "info");
+          Swal.fire("Recipe are not saved", "", "info");
         }
       });
 
@@ -69,15 +69,8 @@ export default function AddRecipe() {
       }else{
         toast.error("Something wrong")
       }
-
-
       }
-    
-      
-   
     };
-
-
 
   return (
     <div className="w-full px-16">

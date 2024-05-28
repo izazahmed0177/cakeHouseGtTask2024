@@ -7,6 +7,7 @@ import { useAuthState, useCreateUserWithEmailAndPassword } from "react-firebase-
 import auth from "../firebase/firebase.config";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import Swal from 'sweetalert2'
 
 export default function Register() {
 
@@ -44,7 +45,14 @@ export default function Register() {
 
 if (password===confirmPassword) {
   createUserWithEmailAndPassword(email,password)
-  toast.success("Registetion Successfully")
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "Registration Successfully",
+    showConfirmButton: false,
+    timer: 1500
+  });
+  toast.success("Registration Successfully")
  
 }
 

@@ -35,8 +35,8 @@ export default function DetailRecepeDashbord() {
     const hendleDelete=()=>{
       
       Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
+        title: "Are you sure Delete Recipe ?",
+        text: "You won't be able to revert this Recipe!",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
@@ -47,7 +47,7 @@ export default function DetailRecepeDashbord() {
           recpiDelete();
           Swal.fire({
             title: "Deleted!",
-            text: "Your file has been deleted.",
+            text: "Your Recipe has been deleted.",
             icon: "success"
           });
         }
@@ -60,7 +60,7 @@ export default function DetailRecepeDashbord() {
         const deleteRecepi=await axios.delete(`http://localhost:3000/recipes/${recipeDetails.id}`)
 
         if (deleteRecepi?.status === 200) {
-            alert("Are you Delete this item")
+            // alert("Are you Delete this item")
         toast.success('Successfully Delete Recipe Item')
         navigate(from);
           }else{
@@ -97,12 +97,6 @@ export default function DetailRecepeDashbord() {
 
               </>
             }
-    
-
-
-
-
-
 		{/* <img src="https://source.unsplash.com/random/480x360" alt="" className="w-full h-60 sm:h-96 bg-gray-500" /> */}
 		<div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-gray-50">
 			<div className="space-y-2">

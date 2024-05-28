@@ -5,6 +5,7 @@ import auth from "../firebase/firebase.config";
 import Loading from "../components/shaerItem/Loading";
 import { NavLink, Outlet } from "react-router-dom";
 import toast from "react-hot-toast";
+import Swal from 'sweetalert2'
 // import { confirmAlert } from "react-confirm-alert";
 
 export default function DashbaordLayouts() {
@@ -24,7 +25,17 @@ export default function DashbaordLayouts() {
   const handaleLogout = async () => {
     const success = await signOut();
     if (success) {
-      alert("You are sign out");
+      // alert("You are sign out");
+
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "You are sign out",
+        showConfirmButton: false,
+        timer: 1500
+      });
+
+
       toast.error("You are sign out")
     }
   };

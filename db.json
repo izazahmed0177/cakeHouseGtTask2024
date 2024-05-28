@@ -41,14 +41,6 @@
       "category": "British"
     },
     {
-      "id": "11",
-      "title": "Butter Chicken",
-      "price": 16.99,
-      "description": "Tender chicken cooked in a rich, creamy tomato gravy.",
-      "image": "https://example.com/images/butter-chicken.jpg",
-      "category": "Indian"
-    },
-    {
       "id": "12",
       "title": "Rogan Josh",
       "price": 17.99,
@@ -166,6 +158,14 @@
       "price": "879",
       "category": "Mexican",
       "description": "hghgddyhytyu",
+      "image": ""
+    },
+    {
+      "id": "674467",
+      "title": "gdhdhghdg",
+      "price": "09897",
+      "category": "Chinese",
+      "description": "dhdhghgdghd",
       "image": ""
     }
   ],

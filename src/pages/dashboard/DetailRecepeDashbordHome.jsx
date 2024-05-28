@@ -33,11 +33,10 @@ export default function DetailRecepeDashbordHome() {
 
 
     const hendleDelete=()=>{
-    
-         
+  
           Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
+            title: "Are you sure Delete Recipe?",
+            text: "You won't be able to revert this Recipe!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
@@ -48,7 +47,7 @@ export default function DetailRecepeDashbordHome() {
               deletItem();
               Swal.fire({
                 title: "Deleted!",
-                text: "Your file has been deleted.",
+                text: "Your Recipe has been deleted.",
                 icon: "success"
               });
             }

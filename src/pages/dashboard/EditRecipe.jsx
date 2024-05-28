@@ -57,18 +57,18 @@ export default function EditRecipe() {
     };
 
     Swal.fire({
-      title: "Do you want to save the changes?",
+      title: "Do you want to Edit the Recipe?",
       showDenyButton: true,
       showCancelButton: true,
-      confirmButtonText: "Save",
-      denyButtonText: `Don't save`
+      confirmButtonText: "Save Edit Recipe",
+      denyButtonText: `Don't save Edit Recipe`
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         recrpiEdit();
-        Swal.fire("Saved!", "", "success");
+        Swal.fire("Saved Edit Recipe!", "", "success");
       } else if (result.isDenied) {
-        Swal.fire("Changes are not saved", "", "info");
+        Swal.fire("Recipe are not Edit", "", "info");
       }
     });
 

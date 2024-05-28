@@ -9,6 +9,7 @@ import auth from "../firebase/firebase.config";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
+import Swal from 'sweetalert2'
 
 export default function Login() {
   // const [user, loading, error] = useAuthState(auth, options);
@@ -27,6 +28,13 @@ export default function Login() {
     const password = form.password.value;
 
     signInWithEmailAndPassword(email, password);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "LogIn Successfully",
+      showConfirmButton: false,
+      timer: 1500
+    });
   };
 
   useEffect(() => {

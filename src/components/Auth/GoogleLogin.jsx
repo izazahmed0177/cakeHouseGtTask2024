@@ -2,6 +2,7 @@
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase/firebase.config';
 // import toast from 'react-hot-toast';
+import Swal from 'sweetalert2'
 
 export default function GoogleLogin() {
 
@@ -9,6 +10,13 @@ export default function GoogleLogin() {
 
   const handleGoogleLogin=()=>{
     signInWithGoogle();
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Login Successfully",
+      showConfirmButton: false,
+      timer: 1500
+    });
   
   }
 

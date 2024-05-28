@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import auth from "../../firebase/firebase.config";
 import { useAuthState, useSignOut } from 'react-firebase-hooks/auth';
 import toast from "react-hot-toast";
+import Swal from 'sweetalert2'
 
 
 function navbar() {
@@ -25,7 +26,18 @@ function navbar() {
   const handleSignout=async()=>{
     const success=await signOut()
     if (success) {
-      alert("You are sign out!!")
+      // alert("You are sign out!!")
+
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "You are sign out!!",
+        showConfirmButton: false,
+        timer: 1500
+      });
+
+
+
       toast.success("You Are Log Out")
       
     }
