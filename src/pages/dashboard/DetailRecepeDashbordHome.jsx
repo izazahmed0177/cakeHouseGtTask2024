@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
 
+import Swal from 'sweetalert2'
+
 export default function DetailRecepeDashbordHome() {
     const { id } = useParams();
     const [recipeDetails, setRecipeDetails] = useState();
@@ -30,24 +32,44 @@ export default function DetailRecepeDashbordHome() {
     },[])
 
 
+    const hendleDelete=()=>{
     
-    const hendleDelete=async()=>{
-      
-      //   }
+         
+          Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              deletItem();
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success"
+              });
+            }
+          });
 
-      //=====================
-      const deleteRecepi=await axios.delete(`http://localhost:3000/recipes/${recipeDetails.id}`)
-
-      if (deleteRecepi?.status === 200) {
-          alert("Are you Delete this item")
-      toast.success('Successfully Delete Recipe Item')
-      navigate(from);
-        }else{
-          toast.error("Something wrong")
-        }
-      
-
+        const deletItem=async()=>{
+          const deleteRecepi=await axios.delete(`http://localhost:3000/recipes/${recipeDetails.id}`)
+  
+        if (deleteRecepi?.status === 200) {
+            // alert("Are you Delete this item")
+        toast.success('Successfully Delete Recipe Item')
+        navigate(from);
+          }else{
+            toast.error("Something wrong")
+          }
+    }
   }
+
+
+
+
   return (
     <div className="p-5 mx-auto sm:p-10 md:p-16 bg-gray-100 text-gray-800">
 	<div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">

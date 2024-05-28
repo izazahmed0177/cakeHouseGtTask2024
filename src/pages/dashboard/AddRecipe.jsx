@@ -3,6 +3,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import Swal from 'sweetalert2'
 
 export default function AddRecipe() {
 
@@ -20,7 +21,7 @@ export default function AddRecipe() {
       loadCategore();
     }, []);
   
-    const handleCreateRecipe = async (e) => {
+    const handleCreateRecipe =(e) => {
       e.preventDefault();
   
       const form = e.target;
@@ -39,20 +40,41 @@ export default function AddRecipe() {
         description,
         image,
       };
-      console.log(recipeData);
-  
-    const postRecep=await axios.post("http://localhost:3000/recipes", recipeData);
+      // console.log(recipeData);
+
+      Swal.fire({
+        title: "Do you want to save the changes?",
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: "Save",
+        denyButtonText: `Don't save`
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          recepiAdd();
+          Swal.fire("Saved!", "", "success");
+        } else if (result.isDenied) {
+          Swal.fire("Changes are not saved", "", "info");
+        }
+      });
+
+      const recepiAdd=async()=>{
+        const postRecep=await axios.post("http://localhost:3000/recipes", recipeData);
 
       if (postRecep?.status === 201) {
         console.log(postRecep);
-        alert("Are you Add this item")
+        // alert("Are you Add this item")
         toast.success('Successfully Add Recipe Item')
+        form.reset();
       }else{
         toast.error("Something wrong")
       }
+
+
+      }
+    
       
-      
-    form.reset();
+   
     };
 
 

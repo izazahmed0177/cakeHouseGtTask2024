@@ -4,6 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 export default function DetailRecepeDashbord() {
     const { id } = useParams();
@@ -31,20 +32,43 @@ export default function DetailRecepeDashbord() {
 
 
     
-    const hendleDelete=async()=>{
+    const hendleDelete=()=>{
       
-      //   }
-
-      //=====================
-      const deleteRecepi=await axios.delete(`http://localhost:3000/recipes/${recipeDetails.id}`)
-
-      if (deleteRecepi?.status === 200) {
-          alert("Are you Delete this item")
-      toast.success('Successfully Delete Recipe Item')
-      navigate(from);
-        }else{
-          toast.error("Something wrong")
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          recpiDelete();
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success"
+          });
         }
+      });
+
+
+
+      const recpiDelete=async()=>{
+
+        const deleteRecepi=await axios.delete(`http://localhost:3000/recipes/${recipeDetails.id}`)
+
+        if (deleteRecepi?.status === 200) {
+            alert("Are you Delete this item")
+        toast.success('Successfully Delete Recipe Item')
+        navigate(from);
+          }else{
+            toast.error("Something wrong")
+          }
+
+      }
+   
       
 
   }

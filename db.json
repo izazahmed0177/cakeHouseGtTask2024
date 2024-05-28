@@ -11,8 +11,8 @@
     {
       "id": "3",
       "title": "Sushi Platter",
-      "price": 24.99,
-      "description": "A variety of fresh sushi including nigiri, sashimi, and rolls.",
+      "price": "24.99",
+      "description": "A variety of fresh sushi including nigiri, sashimi, and rolls.oo",
       "image": "https://img.freepik.com/free-photo/various-sushi-rolls-plate_140725-4318.jpg?t=st=1716700037~exp=1716703637~hmac=c2b5c73343fee5a8992eb74d083ddcc3ed98a9224fe355ea29d6f4ab3e9caa25&w=740",
       "category": "Japanese"
     },
@@ -39,30 +39,6 @@
       "description": "Tender beef filet wrapped in puff pastry with duxelles and prosciutto.oo",
       "image": "https://img.freepik.com/free-photo/fried-meat-table_140725-2402.jpg?t=st=1716700201~exp=1716703801~hmac=f61f58ee26245f487a8b8f4feea62a9ec2a775462ebc2ba35034db4ca388988c&w=740",
       "category": "British"
-    },
-    {
-      "id": "8",
-      "title": "French Onion Soup",
-      "price": 7.99,
-      "description": "A savory soup made with caramelized onions, beef broth, and topped with melted cheese.",
-      "image": "https://example.com/images/french-onion-soup.jpg",
-      "category": "French"
-    },
-    {
-      "id": "9",
-      "title": "Margherita Pizza",
-      "price": 13.99,
-      "description": "Classic pizza topped with fresh tomatoes, mozzarella cheese, and basil.",
-      "image": "https://example.com/images/margherita-pizza.jpg",
-      "category": "Italian"
-    },
-    {
-      "id": "10",
-      "title": "Vegetable Stir Fry",
-      "price": 9.99,
-      "description": "A mix of fresh vegetables stir-fried with soy sauce and served over rice.",
-      "image": "https://example.com/images/vegetable-stir-fry.jpg",
-      "category": "Chinese"
     },
     {
       "id": "11",
@@ -111,22 +87,6 @@
       "category": "Chinese",
       "description": "Eating more plant-forward meals is not only great for your body but great for the planet too! Whether you're a long-time vegetarian looking for some new inspiration or someone just trying to add a few more veggie-friendly options to their menu, here's the place to find what you're looking for.ljlojjo",
       "image": "https://pinchofyum.com/wp-content/uploads/Cauliflower-Black-Bean-Tostadas-4-400x400.jpg"
-    },
-    {
-      "id": "6764467",
-      "title": "hgdhdyjfy",
-      "price": "65463",
-      "category": "American",
-      "description": "jhgcghhccggyhvgugccgtkkkooo33",
-      "image": "yutyytdt"
-    },
-    {
-      "id": "87777555",
-      "title": "fuyytxfhg",
-      "price": "879875857587",
-      "category": "Italian",
-      "description": "jhuhuyuyuyjhjhvhhvj00002300000999",
-      "image": "jhvuuuuyf"
     },
     {
       "id": "101",
@@ -191,6 +151,22 @@
       "description": "Classic pizza topped with fresh tomatoes, mozzarella cheese, and basil.",
       "image": "https://example.com/images/margherita-pizza.jpg",
       "category": "Italian"
+    },
+    {
+      "id": "8778",
+      "title": "jfddhg",
+      "price": "767878",
+      "category": "Chinese",
+      "description": "chggffgdf",
+      "image": ""
+    },
+    {
+      "id": "5665",
+      "title": "gfghgh",
+      "price": "879",
+      "category": "Mexican",
+      "description": "hghgddyhytyu",
+      "image": ""
     }
   ],
   "categories": [

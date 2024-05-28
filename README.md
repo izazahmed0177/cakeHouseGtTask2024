@@ -56,3 +56,14 @@ npm install axios
 
 
 https://www.npmjs.com/package/react-confirm-alert
+
+
+
+
+PrimeReact
+[ConfirmDialog](https://www.primefaces.org/primereact-v8/confirmdialog/)
+
+
+
+sweetalert2
+[sweetalert](https://sweetalert2.github.io/)
