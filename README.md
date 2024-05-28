@@ -55,6 +55,24 @@ react GET,POST,PUT,PATCH,DELET (CRUD opreation)
 npm install axios
 
 
+
+Smoking hot React notifications
+[react-hot-toast](https://react-hot-toast.com/)
+[hot-toast](https://react-hot-toast.com/docs)
+
+[ react-hot-toast Github](https://github.com/timolins/react-hot-toast)
+
+
+
+
+
+
+
+
+
+
+
+
 https://www.npmjs.com/package/react-confirm-alert
 
 
@@ -65,5 +83,7 @@ PrimeReact
 
 
 
+
+A BEAUTIFUL, RESPONSIVE, CUSTOMIZABLE, ACCESSIBLE (WAI-ARIA) REPLACEMENT FOR JAVASCRIPT'S POPUP BOXES
 sweetalert2
 [sweetalert](https://sweetalert2.github.io/)
