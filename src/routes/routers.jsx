@@ -102,6 +102,7 @@ const router=createBrowserRouter([
             },
             {
               path: "allrecipedashbord/detailsrecipedashbord/:id",
+              // path: "/detailsrecipedashbord/:id",
               element: <DetailRecepeDashbord />,
             },
         ],

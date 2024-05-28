@@ -17,7 +17,8 @@ export default function RecepiCard({ recipe }) {
               </>
               :
               <>
-              <img src={recipe?.image} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
+              <img src={recipe?.image} alt="" 
+              className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
 
               </>
             }

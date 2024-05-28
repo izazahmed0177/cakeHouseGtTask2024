@@ -2,7 +2,8 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import toast from "react-hot-toast";
+import { NavLink, useParams } from "react-router-dom";
 
 export default function DetailRecepeDashbord() {
     const { id } = useParams();
@@ -20,6 +21,33 @@ export default function DetailRecepeDashbord() {
         }
         loadRacipe()
     },[])
+
+
+    
+    const hendleDelete=async()=>{
+      
+      //   }
+
+      //=====================
+      const deleteRecepi=await axios.delete(`http://localhost:3000/recipes/${recipeDetails.id}`)
+
+      if (deleteRecepi?.status === 200) {
+          alert("Are you Delete this item")
+      toast.success('Successfully Delete Recipe Item')
+        }else{
+          toast.error("Something wrong")
+        }
+      
+
+  }
+
+
+
+
+
+
+
+
     console.log(recipeDetails);
   return (
     <div className="p-5 mx-auto sm:p-10 md:p-16 bg-gray-100 text-gray-800">
@@ -56,8 +84,8 @@ export default function DetailRecepeDashbord() {
 				<p>{recipeDetails?.description}</p>
 			</div>
             <div className="flex gap-4 ">
-            <button className="btn btn-outline btn-primary">Edit</button>
-            <button className="btn btn-outline btn-error">Delete</button>
+            <NavLink to={`/dashboard/edit-recipe/${recipeDetails?.id}` } className="btn btn-sx btn-neutral">Edit</NavLink>
+            <button onClick={hendleDelete} className="btn btn-outline btn-error">Delete</button>
 
             </div>
 		</div>

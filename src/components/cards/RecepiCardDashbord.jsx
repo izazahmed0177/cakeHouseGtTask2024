@@ -27,7 +27,7 @@ export default function RecepiCardDashbord({ recipe }) {
       )}
 
       {/* <div className="flex flex-col justify-end p-6 space-y-8"> */}
-      <div className="flex flex-col justify-end px-2 py-1 m-0 space-y-8">
+      <div className="flex flex-col justify-between p-6 space-y-8">
         <div className="space-y-2">
           <h2 className="text-2xl font-semibold tracking-wide">
             {recipe?.title}
@@ -47,6 +47,7 @@ export default function RecepiCardDashbord({ recipe }) {
 
         <div className="flex flex-col items-end justify-end shadow-2xl ">
         <NavLink
+          // to={`allrecipedashbord/detailsrecipedashbord/${recipe.id}`}
           to={`detailsrecipedashbord/${recipe.id}`}
           className=" btn flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-600 text-gray-50"
         >

@@ -40,17 +40,34 @@ export default function DashbaordLayouts() {
         {/* <ul className="menu p-4 w-60 min-h-full bg-base-200 text-base-content flex flex-col justify-between"> */}
         <ul className="menu p-4 w-60 min-h-full  bg-base-200 text-base-content flex flex-col justify-between">
           <div>
+
+          <li className="border border-black p-4 text w-full">
+              <NavLink
+                // style={({ isActive, isPending, isTransitioning }) => {
+                //   return {
+                //     fontWeight: isActive ? "bold" : "",
+                //     color: isPending ? "red" : "white",
+                //     viewTransitionName: isTransitioning ? "slide" : "",
+                //   };
+                // }}
+                to={`/dashboard`}
+                className="bg-blue-600"
+              >
+                Dashboard Home
+              </NavLink>
+            </li>
+
             <li className="border border-blue-600 p-4 text w-full">
               {/* <Link to={""}>Dashboard</Link> */}
               <NavLink
-                style={({ isActive, isPending, isTransitioning }) => {
-                  return {
-                    fontWeight: isActive ? "bold" : "",
-                    color: isPending ? "red" : "white",
-                    viewTransitionName: isTransitioning ? "slide" : "",
-                  };
-                }}
-                to={"/dashboard/manage-recipes"}
+                // style={({ isActive, isPending, isTransitioning }) => {
+                //   return {
+                //     fontWeight: isActive ? "bold" : "",
+                //     color: isPending ? "red" : "white",
+                //     viewTransitionName: isTransitioning ? "slide" : "",
+                //   };
+                // }}
+                to={`/dashboard/manage-recipes`}
                 className="bg-blue-600"
               >
                 Mangae All Recipes
@@ -59,14 +76,14 @@ export default function DashbaordLayouts() {
 
             <li className="border border-black p-4 text w-full">
               <NavLink
-                style={({ isActive, isPending, isTransitioning }) => {
-                  return {
-                    fontWeight: isActive ? "bold" : "",
-                    color: isPending ? "red" : "white",
-                    viewTransitionName: isTransitioning ? "slide" : "",
-                  };
-                }}
-                to={"/dashboard/allrecipedashbord"}
+                // style={({ isActive, isPending, isTransitioning }) => {
+                //   return {
+                //     fontWeight: isActive ? "bold" : "",
+                //     color: isPending ? "red" : "white",
+                //     viewTransitionName: isTransitioning ? "slide" : "",
+                //   };
+                // }}
+                to={`/dashboard/allrecipedashbord`}
                 className="bg-blue-600"
               >
                 All Recipe
@@ -75,19 +92,21 @@ export default function DashbaordLayouts() {
 
             <li className="border border-black p-4 text w-full">
               <NavLink
-                style={({ isActive, isPending, isTransitioning }) => {
-                  return {
-                    fontWeight: isActive ? "bold" : "",
-                    color: isPending ? "red" : "white",
-                    viewTransitionName: isTransitioning ? "slide" : "",
-                  };
-                }}
-                to={"/dashboard/add-recipe"}
+                // style={({ isActive, isPending, isTransitioning }) => {
+                //   return {
+                //     fontWeight: isActive ? "bold" : "",
+                //     color: isPending ? "red" : "white",
+                //     viewTransitionName: isTransitioning ? "slide" : "",
+                //   };
+                // }}
+                to={`/dashboard/add-recipe`}
                 className="bg-blue-600"
               >
                 Add Recipe
               </NavLink>
             </li>
+
+
           </div>
 
                   {/* <li className="border border-black p-4 text w-full">

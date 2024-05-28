@@ -10,28 +10,6 @@ import { NavLink } from "react-router-dom";
 
 export default function RecepiRow({recipe}) {
 
-    // const confirm = useConfirm();
-
-
-    // const Swal = require('sweetalert2')
-
-    // Swal.fire({
-    //     title: "Are you sure?",
-    //     text: "You won't be able to revert this!",
-    //     icon: "warning",
-    //     showCancelButton: true,
-    //     confirmButtonColor: "#3085d6",
-    //     cancelButtonColor: "#d33",
-    //     confirmButtonText: "Yes, delete it!"
-    //   }).then((result) => {
-    //     if (result.isConfirmed) {
-    //       Swal.fire({
-    //         title: "Deleted!",
-    //         text: "Your file has been deleted.",
-    //         icon: "success"
-    //       });
-    //     }
-    //   });
     
 
 
@@ -41,57 +19,8 @@ export default function RecepiRow({recipe}) {
 
 
     const hendleDelete=async()=>{
-        //  confirmAlert({
-        //  confirm({
-        //     title: "Confirm to submit",
-        //     message: "Are you sure to do this.",
-        //     buttons: [
-        //       {
-        //         label: "Yes",
-        //         onClick: () => {
-        //           show()
-
-
-        //         }
-                
-        //       },
-        //       {
-        //         label: "No"
-        //         // onClick: () => alert("Click No")
-        //       }
-        //     ]
-        //   });
-
-        // if (confirm({
-        //     confirmation: 'Are you sure?'
-        //   })) {
-        //     console.log('yes');
-        //     show();
-           
-        //   } else {
-        //     // console.log('no');
-        //     alert("product not delete")
+      
         //   }
-
-
-
-
-
-        //   const show=async()=>{
-        //      const deletRecepi=await axios.delete(`http://localhost:3000/recipes/${recipe.id}`)
-
-        // if (deletRecepi?.status === 200) {
-        //     alert("Delete item")
-        //   }
-
-
-        //   }
-
-
-
-
-
-
 
         //=====================
         const deletRecepi=await axios.delete(`http://localhost:3000/recipes/${recipe.id}`)
