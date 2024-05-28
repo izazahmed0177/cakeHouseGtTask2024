@@ -35,8 +35,8 @@
     {
       "id": "6",
       "title": "Beef Wellington",
-      "price": 29.99,
-      "description": "Tender beef filet wrapped in puff pastry with duxelles and prosciutto.",
+      "price": "29.99",
+      "description": "Tender beef filet wrapped in puff pastry with duxelles and prosciutto.oo",
       "image": "https://img.freepik.com/free-photo/fried-meat-table_140725-2402.jpg?t=st=1716700201~exp=1716703801~hmac=f61f58ee26245f487a8b8f4feea62a9ec2a775462ebc2ba35034db4ca388988c&w=740",
       "category": "British"
     },

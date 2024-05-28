@@ -4,6 +4,7 @@
 import { NavLink } from "react-router-dom";
 import auth from "../../firebase/firebase.config";
 import { useAuthState, useSignOut } from 'react-firebase-hooks/auth';
+import toast from "react-hot-toast";
 
 
 function navbar() {
@@ -24,7 +25,8 @@ function navbar() {
   const handleSignout=async()=>{
     const success=await signOut()
     if (success) {
-      alert("Log out!!")
+      alert("You are sign out!!")
+      toast.success("You Are Log Out")
       
     }
 

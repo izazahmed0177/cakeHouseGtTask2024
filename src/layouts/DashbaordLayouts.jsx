@@ -4,6 +4,7 @@ import { useSignOut } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.config";
 import Loading from "../components/shaerItem/Loading";
 import { NavLink, Outlet } from "react-router-dom";
+import toast from "react-hot-toast";
 // import { confirmAlert } from "react-confirm-alert";
 
 export default function DashbaordLayouts() {
@@ -24,6 +25,7 @@ export default function DashbaordLayouts() {
     const success = await signOut();
     if (success) {
       alert("You are sign out");
+      toast.error("You are sign out")
     }
   };
 

@@ -1,6 +1,7 @@
 // import React from 'react'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase/firebase.config';
+// import toast from 'react-hot-toast';
 
 export default function GoogleLogin() {
 
@@ -8,6 +9,7 @@ export default function GoogleLogin() {
 
   const handleGoogleLogin=()=>{
     signInWithGoogle();
+  
   }
 
   console.log(user);
