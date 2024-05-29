@@ -19,6 +19,7 @@ import DetailsRecepi from "../pages/DetailsRecepi";
 import AllRecipeDashboard from "../pages/dashboard/AllRecipeDashboard";
 import DetailRecepeDashbord from "../pages/dashboard/DetailRecepeDashbord";
 import DetailRecepeDashbordHome from "../pages/dashboard/DetailRecepeDashbordHome";
+import UserDetels from "../components/user/UserDetels";
 
 
 
@@ -88,6 +89,10 @@ const router=createBrowserRouter([
             {
               path: "manage-recipes",
               element: <ManageAllRecipe />,
+            },
+            {
+              path: "user-detail",
+              element: <UserDetels />,
             },
             {
               path: "add-recipe",

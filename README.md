@@ -8,6 +8,19 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
+
+Degine
+
+[TailwindFlex](https://tailwindflex.com/@sammytg7/user-profile)
+
+[TailwindFlex](https://tailwindflex.com/)
+
+
+
+
+
+
+
 react firebase hooks
 
 -[react firebase hooks](https://www.npmjs.com/package/react-firebase-hooks)

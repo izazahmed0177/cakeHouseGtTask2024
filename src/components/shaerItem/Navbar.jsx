@@ -15,13 +15,7 @@ function navbar() {
   const [user] = useAuthState(auth);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [signOut] = useSignOut(auth);
-  // const [signOut, loading, error] = useSignOut(auth);
-
-  // console.log(user);
-  // // console.log(user.photoURL);
-  // console.log(user?.email);
-  // console.log(user?.photoURL);
-  // console.log(user?.displayName);
+ 
 
   const handleSignout=async()=>{
     const success=await signOut()

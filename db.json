@@ -59,8 +59,8 @@
     {
       "id": "14",
       "title": "Ramen",
-      "price": 12.99,
-      "description": "A hearty Japanese noodle soup with meat, vegetables, and broth.",
+      "price": "12.99",
+      "description": "A hearty Japanese noodle soup with meat, vegetables, and broth.hgujgh",
       "image": "https://example.com/images/ramen.jpg",
       "category": "Japanese"
     },

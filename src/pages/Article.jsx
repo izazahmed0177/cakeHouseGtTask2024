@@ -4,7 +4,7 @@ export default function Article() {
   return (
     <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-100 dark:text-gray-800">
 	<div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
-		<img src="https://source.unsplash.com/random/480x360" alt="" className="w-full h-60 sm:h-96 dark:bg-gray-500" />
+		<img src="https://images.unsplash.com/photo-1555066932-e78dd8fb77bb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2dyYW1tZXJ8ZW58MHx8MHx8fDA%3D" alt="" className="w-full h-60 sm:h-96 dark:bg-gray-500" />
 		<div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md dark:bg-gray-50">
 			<div className="space-y-2">
 				<a rel="noopener noreferrer" href="#" className="inline-block text-2xl font-semibold sm:text-3xl">The Best Activewear from the Nordstrom Anniversary Sale</a>

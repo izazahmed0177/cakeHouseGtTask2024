@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import CategoryCard from "../../components/cards/CategoryCard";
 // import RecepiCardDashbord from "../../components/cards/RecepiCardDashbord";
 import RecepiCardDashbordHome from "../../components/cards/RecepiCardDashbordHome";
+import UserDetels from "../../components/user/UserDetels";
 
 export default function DashboardHome() {
   const [recipes,setRecipes]=useState()
@@ -40,6 +41,9 @@ getRecipesCategories();
 
   return (
     <div>
+   <div>
+   <UserDetels></UserDetels>
+   </div>
    
 
       <div className="mx-16">
